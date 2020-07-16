@@ -30,6 +30,8 @@ USAGE
 <!-- commands -->
 * [`gcu hello [FILE]`](#gcu-hello-file)
 * [`gcu help [COMMAND]`](#gcu-help-command)
+* [`gcu switch:cluster`](#gcu-switchcluster)
+* [`gcu sync`](#gcu-sync)
 
 ## `gcu hello [FILE]`
 
@@ -67,4 +69,32 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.0/src/commands/help.ts)_
+
+## `gcu switch:cluster`
+
+Switch cluster.
+
+```
+USAGE
+  $ gcu switch:cluster
+
+EXAMPLE
+  $ gcu switch:cluster
+```
+
+_See code: [src/commands/switch/cluster.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/switch/cluster.ts)_
+
+## `gcu sync`
+
+Stores all of the projects and clusters so that the switch is a lot faster.
+
+```
+USAGE
+  $ gcu sync
+
+EXAMPLE
+  $ gcu sync
+```
+
+_See code: [src/commands/sync.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/sync.ts)_
 <!-- commandsstop -->
