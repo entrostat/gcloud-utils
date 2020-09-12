@@ -5,7 +5,11 @@ import {addToConfigJson} from "../../shared/helpers/add-to-config-json";
 import * as fs from 'fs-extra';
 import * as inquirer from 'inquirer';
 import {readConfigJson} from "../../shared/helpers/read-config-json";
-import {uniq} from 'lodash';
+import {uniqBy} from 'lodash';
+// @ts-ignore
+import * as inquirerAutocompletePrompt from 'inquirer-autocomplete-prompt';
+import * as Fuse from 'fuse.js';
+
 
 interface ClusterDetails {
   clusterName: string;
@@ -31,12 +35,24 @@ export default class Cluster extends Command {
     const config = await readConfigJson(configPath);
     const clusters = config.clusters;
 
-    const projects = uniq(clusters.map((c: ClusterDetails) => ({name: c.projectName})).sort());
+    const projects = uniqBy(clusters.map((c: ClusterDetails) => ({name: c.projectName, cluster: c.clusterName})).sort(), 'name');
+    inquirer.registerPrompt('autocomplete', inquirerAutocompletePrompt);
+
+    // @ts-ignore
+    const fuse = new Fuse(projects, {
+      keys: ['name', 'cluster']
+    });
     const project: any = await inquirer.prompt([{
       name: 'project',
       message: 'Select a project',
-      type: 'list',
-      choices: projects,
+      type: 'autocomplete',
+      source: (currentAnswers: any, input: string) => {
+        if (!input) {
+          return projects;
+        }
+        const results = fuse.search(input);
+        return results.map((r: { item: any; }) => r.item);
+      }
     }])
 
     const filteredClusters = clusters.filter((c: ClusterDetails) => c.projectName === project.project)
