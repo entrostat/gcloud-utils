@@ -3,13 +3,8 @@ import {executeCommand} from "../shared/helpers/execute-command";
 import * as path from 'path';
 import {addToConfigJson} from "../shared/helpers/add-to-config-json";
 import * as fs from 'fs-extra';
+import { ClusterDetails } from '../shared/models/cluster-details';
 
-interface ClusterDetails {
-  clusterName: string;
-  clusterRegion: string;
-  projectId: string;
-  projectName: string;
-}
 
 export default class Sync extends Command {
   static description = 'Stores all of the projects and clusters so that the switch is a lot faster.';

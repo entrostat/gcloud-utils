@@ -1,22 +1,14 @@
 import {Command} from "@oclif/command";
 import {executeCommand} from "../../shared/helpers/execute-command";
 import * as path from 'path';
-import {addToConfigJson} from "../../shared/helpers/add-to-config-json";
-import * as fs from 'fs-extra';
 import * as inquirer from 'inquirer';
 import {readConfigJson} from "../../shared/helpers/read-config-json";
 import {uniqBy} from 'lodash';
 // @ts-ignore
 import * as inquirerAutocompletePrompt from 'inquirer-autocomplete-prompt';
 import * as Fuse from 'fuse.js';
+import { ClusterDetails } from '../../shared/models/cluster-details';
 
-
-interface ClusterDetails {
-  clusterName: string;
-  clusterRegion: string;
-  projectId: string;
-  projectName: string;
-}
 
 export default class Cluster extends Command {
   static description = 'Switch cluster.';
