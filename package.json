@@ -1,68 +1,73 @@
 {
-  "name": "gcloud-utils",
-  "description": "Additional utilities to speed up standard GCP workflows",
-  "version": "0.0.0",
-  "author": "Kerren Ortlepp @Kerren-Entrostat",
-  "bin": {
-    "gcu": "./bin/run"
-  },
-  "bugs": "https://github.com/Kerren-Entrostat/gcloud-utils/issues",
-  "dependencies": {
-    "@oclif/command": "^1.6.1",
-    "@oclif/config": "^1.15.1",
-    "@oclif/plugin-help": "^3.0.0",
-    "fuse.js": "^6.4.1",
-    "inquirer": "^7.1.0",
-    "inquirer-autocomplete-prompt": "^1.1.0",
-    "lodash": "^4.17.15",
-    "tslib": "^1.13.0"
-  },
-  "devDependencies": {
-    "@oclif/dev-cli": "^1.22.2",
-    "@oclif/test": "^1.2.5",
-    "@types/chai": "^4.2.11",
-    "@types/fs-extra": "^8.1.0",
-    "@types/inquirer": "^6.5.0",
-    "@types/mocha": "^5.2.7",
-    "@types/node": "^10.17.21",
-    "chai": "^4.2.0",
-    "fs-extra": "^9.0.0",
-    "globby": "^10.0.2",
-    "mocha": "^5.2.0",
-    "nyc": "^14.1.1",
-    "prettier": "^2.0.5",
-    "standard-version": "^8.0.0",
-    "ts-node": "^8.10.1",
-    "typescript": "^3.9.2"
-  },
-  "engines": {
-    "node": ">=8.0.0"
-  },
-  "files": [
-    "/bin",
-    "/lib",
-    "/npm-shrinkwrap.json",
-    "/oclif.manifest.json"
-  ],
-  "homepage": "https://github.com/Kerren-Entrostat/gcloud-utils",
-  "keywords": [
-    "oclif"
-  ],
-  "license": "MIT",
-  "main": "lib/index.js",
-  "oclif": {
-    "commands": "./lib/commands",
-    "bin": "gcu",
-    "plugins": [
-      "@oclif/plugin-help"
-    ]
-  },
-  "repository": "Kerren-Entrostat/gcloud-utils",
-  "scripts": {
-    "postpack": "rm -f oclif.manifest.json",
-    "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
-    "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
-    "version": "oclif-dev readme && git add README.md"
-  },
-  "types": "lib/index.d.ts"
+    "name": "gcloud-utils",
+    "description": "Additional utilities to speed up standard GCP workflows",
+    "version": "0.0.0",
+    "author": "Kerren Ortlepp @Kerren-Entrostat",
+    "bin": {
+        "gcu": "./bin/run"
+    },
+    "bugs": "https://github.com/Kerren-Entrostat/gcloud-utils/issues",
+    "dependencies": {
+        "@oclif/command": "^1.6.1",
+        "@oclif/config": "^1.15.1",
+        "@oclif/plugin-help": "^3.0.0",
+        "fuse.js": "^6.4.1",
+        "inquirer": "^7.1.0",
+        "inquirer-autocomplete-prompt": "^1.1.0",
+        "lodash": "^4.17.15",
+        "tslib": "^1.13.0"
+    },
+    "devDependencies": {
+        "@oclif/dev-cli": "^1.22.2",
+        "@oclif/test": "^1.2.5",
+        "@types/chai": "^4.2.11",
+        "@types/fs-extra": "^8.1.0",
+        "@types/inquirer": "^6.5.0",
+        "@types/mocha": "^5.2.7",
+        "@types/node": "^10.17.21",
+        "chai": "^4.2.0",
+        "fs-extra": "^9.0.0",
+        "globby": "^10.0.2",
+        "mocha": "^5.2.0",
+        "nyc": "^14.1.1",
+        "prettier": "^2.0.5",
+        "standard-version": "^8.0.0",
+        "ts-node": "^8.10.1",
+        "typescript": "^3.9.2"
+    },
+    "engines": {
+        "node": ">=8.0.0"
+    },
+    "files": [
+        "/bin",
+        "/lib",
+        "/npm-shrinkwrap.json",
+        "/oclif.manifest.json"
+    ],
+    "homepage": "https://github.com/Kerren-Entrostat/gcloud-utils",
+    "keywords": [
+        "oclif"
+    ],
+    "license": "MIT",
+    "main": "lib/index.js",
+    "oclif": {
+        "commands": "./lib/commands",
+        "bin": "gcu",
+        "plugins": [
+            "@oclif/plugin-help"
+        ],
+        "topics": {
+            "debug": {
+                "description": "Tools used to debug this CLI and ensure it's working as expected."
+            }
+        }
+    },
+    "repository": "Kerren-Entrostat/gcloud-utils",
+    "scripts": {
+        "postpack": "rm -f oclif.manifest.json",
+        "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
+        "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
+        "version": "oclif-dev readme && git add README.md"
+    },
+    "types": "lib/index.d.ts"
 }

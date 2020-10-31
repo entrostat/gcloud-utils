@@ -19,7 +19,7 @@ $ npm install -g gcloud-utils
 $ gcu COMMAND
 running command...
 $ gcu (-v|--version|version)
-gcloud-utils/0.0.0 linux-x64 node-v12.16.3
+gcloud-utils/0.0.0 linux-x64 node-v14.15.0
 $ gcu --help [COMMAND]
 USAGE
   $ gcu COMMAND
@@ -28,30 +28,25 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gcu hello [FILE]`](#gcu-hello-file)
+* [`gcu debug:print`](#gcu-debugprint)
 * [`gcu help [COMMAND]`](#gcu-help-command)
+* [`gcu info`](#gcu-info)
 * [`gcu switch:cluster`](#gcu-switchcluster)
 * [`gcu sync`](#gcu-sync)
 
-## `gcu hello [FILE]`
+## `gcu debug:print`
 
-describe the command here
+Print the current config.
 
 ```
 USAGE
-  $ gcu hello [FILE]
-
-OPTIONS
-  -f, --force
-  -h, --help       show CLI help
-  -n, --name=name  name to print
+  $ gcu debug:print
 
 EXAMPLE
-  $ gcu hello
-  hello world from ./src/hello.ts!
+  $ gcu print
 ```
 
-_See code: [src/commands/hello.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/hello.ts)_
+_See code: [src/commands/debug/print.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/debug/print.ts)_
 
 ## `gcu help [COMMAND]`
 
@@ -70,9 +65,20 @@ OPTIONS
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.0/src/commands/help.ts)_
 
+## `gcu info`
+
+Prints the current info around the selected project and cluster.
+
+```
+USAGE
+  $ gcu info
+```
+
+_See code: [src/commands/info.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/info.ts)_
+
 ## `gcu switch:cluster`
 
-Switch cluster.
+Switch the active Kubernetes cluster.
 
 ```
 USAGE
