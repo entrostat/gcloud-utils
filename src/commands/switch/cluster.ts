@@ -11,7 +11,7 @@ import { ClusterDetails } from '../../shared/models/cluster-details';
 
 
 export default class Cluster extends Command {
-  static description = 'Switch cluster.';
+  static description = 'Switch the active Kubernetes cluster.';
 
   static examples = [
     `$ gcu switch:cluster`,

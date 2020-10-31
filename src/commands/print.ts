@@ -3,7 +3,7 @@ import * as path from 'path';
 import { readConfigJson } from '../shared/helpers/read-config-json';
 
 export default class Print extends Command {
-  static description = 'Print the current config..';
+  static description = 'Print the current config.';
 
   static examples = [
     `$ gcu print`,
