@@ -64,6 +64,9 @@
     },
     "repository": "Kerren-Entrostat/gcloud-utils",
     "scripts": {
+        "release": "standard-version --sign",
+        "release:no-sign": "standard-version",
+        "release:dry-run": "standard-version --dry-run",
         "postpack": "rm -f oclif.manifest.json",
         "prepack": "rm -rf lib && tsc -b && oclif-dev manifest && oclif-dev readme",
         "test": "nyc --extension .ts mocha --forbid-only \"test/**/*.test.ts\"",
