@@ -6,7 +6,5 @@ export async function executeCommands(
     error: (message: string) => void,
     dryRun = false,
 ): Promise<string[]> {
-    return Promise.all(
-        commands.map(command => executeCommand(command, log, error, dryRun)),
-    );
+    return Promise.all(commands.map(command => executeCommand(command, log, error, dryRun)));
 }

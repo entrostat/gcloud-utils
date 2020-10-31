@@ -6,9 +6,5 @@ export async function executeCommandsUntilSuccessful(
     error: (message: string) => void,
     dryRun = false,
 ): Promise<string[]> {
-    return Promise.all(
-        commands.map(command =>
-            executeCommandUntilSuccessful(command, log, error, dryRun),
-        ),
-    );
+    return Promise.all(commands.map(command => executeCommandUntilSuccessful(command, log, error, dryRun)));
 }

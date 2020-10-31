@@ -17,7 +17,5 @@ export async function executeCommandUntilSuccessful(
             await sleep(1000);
         }
     }
-    throw new Error(
-        `Tried to run the command: ${command} - 1000 times and it still failed...`,
-    );
+    throw new Error(`Tried to run the command: ${command} - 1000 times and it still failed...`);
 }
