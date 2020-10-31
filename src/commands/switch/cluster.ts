@@ -8,6 +8,7 @@ import { uniqBy } from 'lodash';
 import * as inquirerAutocompletePrompt from 'inquirer-autocomplete-prompt';
 import * as Fuse from 'fuse.js';
 import { ClusterDetails } from '../../shared/models/cluster-details';
+import { addToConfigJson } from '../../shared/helpers/add-to-config-json';
 
 export default class Cluster extends Command {
     static description = 'Switch the active Kubernetes cluster.';
@@ -72,5 +73,7 @@ export default class Cluster extends Command {
             this.log,
             this.log,
         );
+
+        await addToConfigJson(configPath, { selectedCluster });
     }
 }
