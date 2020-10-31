@@ -19,7 +19,7 @@ $ npm install -g gcloud-utils
 $ gcu COMMAND
 running command...
 $ gcu (-v|--version|version)
-gcloud-utils/0.0.0 linux-x64 node-v14.15.0
+gcloud-utils/1.0.0 linux-x64 node-v14.15.0
 $ gcu --help [COMMAND]
 USAGE
   $ gcu COMMAND
@@ -46,7 +46,7 @@ EXAMPLE
   $ gcu print
 ```
 
-_See code: [src/commands/debug/print.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/debug/print.ts)_
+_See code: [src/commands/debug/print.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v1.0.0/src/commands/debug/print.ts)_
 
 ## `gcu help [COMMAND]`
 
@@ -74,7 +74,7 @@ USAGE
   $ gcu info
 ```
 
-_See code: [src/commands/info.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v1.0.0/src/commands/info.ts)_
 
 ## `gcu switch:cluster`
 
@@ -88,7 +88,7 @@ EXAMPLE
   $ gcu switch:cluster
 ```
 
-_See code: [src/commands/switch/cluster.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/switch/cluster.ts)_
+_See code: [src/commands/switch/cluster.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v1.0.0/src/commands/switch/cluster.ts)_
 
 ## `gcu sync`
 
@@ -102,5 +102,5 @@ EXAMPLE
   $ gcu sync
 ```
 
-_See code: [src/commands/sync.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v0.0.0/src/commands/sync.ts)_
+_See code: [src/commands/sync.ts](https://github.com/Kerren-Entrostat/gcloud-utils/blob/v1.0.0/src/commands/sync.ts)_
 <!-- commandsstop -->
