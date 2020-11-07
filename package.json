@@ -6,7 +6,7 @@
     "bin": {
         "gcu": "./bin/run"
     },
-    "bugs": "https://github.com/Kerren-Entrostat/gcloud-utils/issues",
+    "bugs": "https://github.com/entrostat/gcloud-utils/issues",
     "dependencies": {
         "@oclif/command": "^1.6.1",
         "@oclif/config": "^1.15.1",
@@ -44,7 +44,7 @@
         "/npm-shrinkwrap.json",
         "/oclif.manifest.json"
     ],
-    "homepage": "https://github.com/Kerren-Entrostat/gcloud-utils",
+    "homepage": "https://github.com/entrostat/gcloud-utils",
     "keywords": [
         "oclif"
     ],
@@ -62,7 +62,7 @@
             }
         }
     },
-    "repository": "Kerren-Entrostat/gcloud-utils",
+    "repository": "entrostat/gcloud-utils",
     "scripts": {
         "release": "standard-version --sign",
         "release:no-sign": "standard-version",
