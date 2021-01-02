@@ -56,12 +56,22 @@ export default class Cluster extends Command {
                 c.name = c.clusterName;
                 return c;
             });
+        // @ts-ignore
+        const fuseClusters = new Fuse(filteredClusters, {
+            keys: ['name'],
+        });
         const cluster: any = await inquirer.prompt([
             {
                 name: 'cluster',
                 message: 'Select a cluster',
-                type: 'list',
-                choices: filteredClusters,
+                type: 'autocomplete',
+                source: (currentAnswers: any, input: string) => {
+                    if (!input) {
+                        return filteredClusters;
+                    }
+                    const results = fuseClusters.search(input);
+                    return results.map((r: { item: any }) => r.item);
+                },
             },
         ]);
 
