@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://github.com/entrostat/gcloud-utils/compare/v1.1.0...v1.1.1) (2021-01-02)
+
+
+### Bug Fixes
+
+* **dependencies:** Updated all of the libraries used to their latest versions ([c0c3182](https://github.com/entrostat/gcloud-utils/commit/c0c3182e371ecb36448b498db5f5d2eff70de622))
+
 ## [1.1.0](https://github.com/entrostat/gcloud-utils/compare/v1.0.2...v1.1.0) (2021-01-02)
 
 
