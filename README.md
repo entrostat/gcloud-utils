@@ -31,7 +31,7 @@ $ npm install -g gcloud-utils
 $ gcu COMMAND
 running command...
 $ gcu (-v|--version|version)
-gcloud-utils/1.1.0 linux-x64 node-v12.16.3
+gcloud-utils/1.1.2 linux-x64 node-v12.16.3
 $ gcu --help [COMMAND]
 USAGE
   $ gcu COMMAND
@@ -60,7 +60,7 @@ OPTIONS
   --all  see all commands in CLI
 ```
 
-_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.0.0/src/commands/help.ts)_
+_See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v3.2.1/src/commands/help.ts)_
 
 ## `gcu info`
 
@@ -76,7 +76,7 @@ ALIASES
   $ gcu p
 ```
 
-_See code: [src/commands/info.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.2/src/commands/info.ts)_
 
 ## `gcu switch:cluster`
 
@@ -90,7 +90,7 @@ ALIASES
   $ gcu sc
 ```
 
-_See code: [src/commands/switch/cluster.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/switch/cluster.ts)_
+_See code: [src/commands/switch/cluster.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.2/src/commands/switch/cluster.ts)_
 
 ## `gcu sync`
 
@@ -104,5 +104,5 @@ EXAMPLE
   $ gcu sync
 ```
 
-_See code: [src/commands/sync.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/sync.ts)_
+_See code: [src/commands/sync.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.2/src/commands/sync.ts)_
 <!-- commandsstop -->
