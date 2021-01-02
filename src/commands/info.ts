@@ -3,7 +3,9 @@ import * as path from 'path';
 import { readConfigJson } from '../shared/helpers/read-config-json';
 
 export default class Info extends Command {
-    static description = 'Prints the current info around the selected project' + ' and cluster.';
+    static description = 'Prints the current info around the selected project and cluster.';
+
+    static aliases = ['i', 'print', 'p'];
 
     static flags = {};
 

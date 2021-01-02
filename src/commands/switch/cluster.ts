@@ -13,7 +13,7 @@ import { addToConfigJson } from '../../shared/helpers/add-to-config-json';
 export default class Cluster extends Command {
     static description = 'Switch the active Kubernetes cluster.';
 
-    static examples = [`$ gcu switch:cluster`];
+    static aliases = ['sc'];
 
     static flags = {};
 
