@@ -31,7 +31,7 @@ $ npm install -g gcloud-utils
 $ gcu COMMAND
 running command...
 $ gcu (-v|--version|version)
-gcloud-utils/1.0.2 linux-x64 node-v14.15.0
+gcloud-utils/1.1.0 linux-x64 node-v12.16.3
 $ gcu --help [COMMAND]
 USAGE
   $ gcu COMMAND
@@ -40,25 +40,10 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`gcu debug:print`](#gcu-debugprint)
 * [`gcu help [COMMAND]`](#gcu-help-command)
 * [`gcu info`](#gcu-info)
 * [`gcu switch:cluster`](#gcu-switchcluster)
 * [`gcu sync`](#gcu-sync)
-
-## `gcu debug:print`
-
-Print the current config.
-
-```
-USAGE
-  $ gcu debug:print
-
-EXAMPLE
-  $ gcu print
-```
-
-_See code: [src/commands/debug/print.ts](https://github.com/entrostat/gcloud-utils/blob/v1.0.2/src/commands/debug/print.ts)_
 
 ## `gcu help [COMMAND]`
 
@@ -84,9 +69,14 @@ Prints the current info around the selected project and cluster.
 ```
 USAGE
   $ gcu info
+
+ALIASES
+  $ gcu i
+  $ gcu print
+  $ gcu p
 ```
 
-_See code: [src/commands/info.ts](https://github.com/entrostat/gcloud-utils/blob/v1.0.2/src/commands/info.ts)_
+_See code: [src/commands/info.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/info.ts)_
 
 ## `gcu switch:cluster`
 
@@ -96,11 +86,11 @@ Switch the active Kubernetes cluster.
 USAGE
   $ gcu switch:cluster
 
-EXAMPLE
-  $ gcu switch:cluster
+ALIASES
+  $ gcu sc
 ```
 
-_See code: [src/commands/switch/cluster.ts](https://github.com/entrostat/gcloud-utils/blob/v1.0.2/src/commands/switch/cluster.ts)_
+_See code: [src/commands/switch/cluster.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/switch/cluster.ts)_
 
 ## `gcu sync`
 
@@ -114,5 +104,5 @@ EXAMPLE
   $ gcu sync
 ```
 
-_See code: [src/commands/sync.ts](https://github.com/entrostat/gcloud-utils/blob/v1.0.2/src/commands/sync.ts)_
+_See code: [src/commands/sync.ts](https://github.com/entrostat/gcloud-utils/blob/v1.1.0/src/commands/sync.ts)_
 <!-- commandsstop -->
